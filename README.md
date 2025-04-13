@@ -24,8 +24,9 @@ cd meetingapp
 pip install -r requirements.txt
 python app.py
 ```
+---
 
-GraphQL Examples:
+## 📬 GraphQL Examples:
 
 ➕ Create a user
 ```
@@ -64,3 +65,33 @@ mutation {
 }
 
 ```
+
+🔗 Remove user from a meeting
+```
+mutation {
+  removeUserFromMeeting(userId: 1, meetingId: 1) {
+    id
+    title
+    attendees {
+      id
+      name
+    }
+  }
+}
+```
+
+❌ Delete a user
+```
+mutation {
+  removeUser(userId: 1)
+}
+```
+
+❌ Delete a meeting
+```
+mutation {
+  removeMeeting(meetingId: 1)
+}
+```
+
+
