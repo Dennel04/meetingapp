@@ -94,4 +94,65 @@ mutation {
 }
 ```
 
+🔍 Get one user
+```
+query {
+  getUser(id: 1) {
+    id
+    name
+    email
+    meetings {
+      id
+      title
+    }
+  }
+}
+```
+
+🔍 Get one meeting
+```
+query {
+  getMeeting(id: 1) {
+    id
+    title
+    time
+    content
+    attendees {
+      id
+      name
+    }
+  }
+}
+```
+
+📃 Get all users
+```
+query {
+  getAllUsers {
+    id
+    name
+    email
+    meetings {
+      id
+      title
+    }
+  }
+}
+```
+
+📃 Get all meetings
+```
+query {
+  getAllMeetings {
+    id
+    title
+    content
+    attendees {
+      name
+    }
+  }
+}
+```
+
+
 
